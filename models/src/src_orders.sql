@@ -7,6 +7,13 @@ select
     CATEGORY as order_category,
     NAME as ORDER_NAME,
     description as order_description,
-    price AS order_price
+    replace (
+        price,
+        'USD'
+    ) :: number (
+        10,
+        2
+    ) as usd_price
+
 from
 src_order

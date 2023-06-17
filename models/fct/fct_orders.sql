@@ -15,7 +15,7 @@ select
     fa.order_category, 
     fa.order_name,
     fa.order_description,
-    fa.order_price, 
+    fa.usd_price, 
     ra.restaurantcategory as restaurantCategory 
     from 
     fct_orders_cleansed fa inner join dim_restaurants_address ra
