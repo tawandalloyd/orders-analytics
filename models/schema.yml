@@ -1,0 +1,16 @@
+version: 2
+
+models:   
+  - name: dim_restaurants_address
+    columns: 
+      - name: restaurant_id
+        tests: 
+          - unique
+          - not_null
+          - relationships:
+              to: ref('dim_restaurants_names')
+              field: restaurant_id
+
+      - name: restaurant_address
+        tests:
+          - not_null
