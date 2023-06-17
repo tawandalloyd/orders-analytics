@@ -1,6 +1,6 @@
 with src_name as (
 
-    select * from products.raw.raw_name
+    select * from {{source('products', 'name')}}
 )
 select
     ID as restaurant_id,

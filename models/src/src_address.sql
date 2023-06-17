@@ -1,6 +1,6 @@
 with src_address as (
 
-    select * from products.raw.raw_address
+    select * from {{ source('products', 'address')}}
 )
 select
     FULL_ADDRESS as restaurant_address,

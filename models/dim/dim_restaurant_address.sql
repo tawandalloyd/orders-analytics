@@ -1,3 +1,9 @@
+{{
+    config(
+        materialized = 'view',
+        on_schema_change = 'fail'
+    )
+}}
 with dim_address_cleansed as (
     select * from {{ ref("src_address")}}
 )

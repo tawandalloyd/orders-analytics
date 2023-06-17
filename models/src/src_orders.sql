@@ -1,6 +1,6 @@
 with src_order as (
 
-    select * from products.raw.raw_orders
+    select * from {{ source('products', 'orders')}}
 )
 select
     RESTAURANT_ID as restaurant_id,
