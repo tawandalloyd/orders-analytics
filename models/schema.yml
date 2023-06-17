@@ -14,3 +14,27 @@ models:
       - name: restaurant_address
         tests:
           - not_null
+
+  - name: dim_restaurants_names
+    columns:
+      - name: restaurant_id
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('dim_restaurants_address')
+              field: restaurant_id
+      
+      - name: restaurant_name
+        tests:
+          - not_null
+
+  - name: fct_orders
+    columns:
+      - name: restaurant_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_restaurants_address')
+              field: restaurant_id
+
