@@ -1,0 +1,11 @@
+version: 2
+sources: 
+    - name: products
+      schema: raw
+      tables:
+        - name: address
+          identifier: raw_address
+        - name: name
+          identifier: raw_name
+        - name: orders
+          identifier: raw_orders
