@@ -1,4 +1,4 @@
-# Orders Analytics 
+# Orders Analytics  
 
 Welcome to the Order Analytics repository! This project showcases the integration of Snowflake, Snowpipe, S3 buckets, and dbt to build a powerful data pipeline for efficient data processing and analysis.
 
